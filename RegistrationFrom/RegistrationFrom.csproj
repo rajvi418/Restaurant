@@ -550,7 +550,7 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="Registration.aspx" />
     <Content Include="Bootstrap\.browserslistrc" />
     <Content Include="Bootstrap\.bundlewatch.config.json" />
     <Content Include="Bootstrap\.cspell.json" />
@@ -976,12 +976,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
