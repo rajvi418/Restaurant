@@ -1,0 +1,1039 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{475D2F89-702B-417B-8D0C-AFC5166E3D18}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoginForm</RootNamespace>
+    <AssemblyName>LoginForm</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44391</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.2.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Bootstrap\.babelrc.js" />
+    <Content Include="Bootstrap\.gitattributes" />
+    <Content Include="Bootstrap\.gitignore" />
+    <Content Include="Bootstrap\build\banner.mjs" />
+    <Content Include="Bootstrap\build\build-plugins.mjs" />
+    <Content Include="Bootstrap\build\change-version.mjs" />
+    <Content Include="Bootstrap\build\generate-sri.mjs" />
+    <Content Include="Bootstrap\build\postcss.config.mjs" />
+    <Content Include="Bootstrap\build\rollup.config.mjs" />
+    <Content Include="Bootstrap\build\vnu-jar.mjs" />
+    <Content Include="Bootstrap\build\zip-examples.mjs" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="Bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="Bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="Bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="Bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="Bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="Bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Bootstrap\js\dist\alert.js" />
+    <Content Include="Bootstrap\js\dist\base-component.js" />
+    <Content Include="Bootstrap\js\dist\button.js" />
+    <Content Include="Bootstrap\js\dist\carousel.js" />
+    <Content Include="Bootstrap\js\dist\collapse.js" />
+    <Content Include="Bootstrap\js\dist\dom\data.js" />
+    <Content Include="Bootstrap\js\dist\dom\event-handler.js" />
+    <Content Include="Bootstrap\js\dist\dom\manipulator.js" />
+    <Content Include="Bootstrap\js\dist\dom\selector-engine.js" />
+    <Content Include="Bootstrap\js\dist\dropdown.js" />
+    <Content Include="Bootstrap\js\dist\modal.js" />
+    <Content Include="Bootstrap\js\dist\offcanvas.js" />
+    <Content Include="Bootstrap\js\dist\popover.js" />
+    <Content Include="Bootstrap\js\dist\scrollspy.js" />
+    <Content Include="Bootstrap\js\dist\tab.js" />
+    <Content Include="Bootstrap\js\dist\toast.js" />
+    <Content Include="Bootstrap\js\dist\tooltip.js" />
+    <Content Include="Bootstrap\js\dist\util\backdrop.js" />
+    <Content Include="Bootstrap\js\dist\util\component-functions.js" />
+    <Content Include="Bootstrap\js\dist\util\config.js" />
+    <Content Include="Bootstrap\js\dist\util\focustrap.js" />
+    <Content Include="Bootstrap\js\dist\util\index.js" />
+    <Content Include="Bootstrap\js\dist\util\sanitizer.js" />
+    <Content Include="Bootstrap\js\dist\util\scrollbar.js" />
+    <Content Include="Bootstrap\js\dist\util\swipe.js" />
+    <Content Include="Bootstrap\js\dist\util\template-factory.js" />
+    <Content Include="Bootstrap\js\index.esm.js" />
+    <Content Include="Bootstrap\js\index.umd.js" />
+    <Content Include="Bootstrap\js\src\alert.js" />
+    <Content Include="Bootstrap\js\src\base-component.js" />
+    <Content Include="Bootstrap\js\src\button.js" />
+    <Content Include="Bootstrap\js\src\carousel.js" />
+    <Content Include="Bootstrap\js\src\collapse.js" />
+    <Content Include="Bootstrap\js\src\dom\data.js" />
+    <Content Include="Bootstrap\js\src\dom\event-handler.js" />
+    <Content Include="Bootstrap\js\src\dom\manipulator.js" />
+    <Content Include="Bootstrap\js\src\dom\selector-engine.js" />
+    <Content Include="Bootstrap\js\src\dropdown.js" />
+    <Content Include="Bootstrap\js\src\modal.js" />
+    <Content Include="Bootstrap\js\src\offcanvas.js" />
+    <Content Include="Bootstrap\js\src\popover.js" />
+    <Content Include="Bootstrap\js\src\scrollspy.js" />
+    <Content Include="Bootstrap\js\src\tab.js" />
+    <Content Include="Bootstrap\js\src\toast.js" />
+    <Content Include="Bootstrap\js\src\tooltip.js" />
+    <Content Include="Bootstrap\js\src\util\backdrop.js" />
+    <Content Include="Bootstrap\js\src\util\component-functions.js" />
+    <Content Include="Bootstrap\js\src\util\config.js" />
+    <Content Include="Bootstrap\js\src\util\focustrap.js" />
+    <Content Include="Bootstrap\js\src\util\index.js" />
+    <Content Include="Bootstrap\js\src\util\sanitizer.js" />
+    <Content Include="Bootstrap\js\src\util\scrollbar.js" />
+    <Content Include="Bootstrap\js\src\util\swipe.js" />
+    <Content Include="Bootstrap\js\src\util\template-factory.js" />
+    <Content Include="Bootstrap\js\tests\browsers.js" />
+    <Content Include="Bootstrap\js\tests\helpers\fixture.js" />
+    <Content Include="Bootstrap\js\tests\integration\bundle-modularity.js" />
+    <Content Include="Bootstrap\js\tests\integration\bundle.js" />
+    <Content Include="Bootstrap\js\tests\integration\index.html" />
+    <Content Include="Bootstrap\js\tests\integration\rollup.bundle-modularity.js" />
+    <Content Include="Bootstrap\js\tests\integration\rollup.bundle.js" />
+    <Content Include="Bootstrap\js\tests\karma.conf.js" />
+    <Content Include="Bootstrap\js\tests\unit\alert.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\base-component.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\button.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\carousel.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\collapse.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\dom\data.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\dom\event-handler.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\dom\manipulator.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\dom\selector-engine.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\dropdown.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\jquery.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\modal.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\offcanvas.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\popover.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\scrollspy.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\tab.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\toast.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\tooltip.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\backdrop.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\component-functions.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\config.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\focustrap.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\index.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\sanitizer.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\scrollbar.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\swipe.spec.js" />
+    <Content Include="Bootstrap\js\tests\unit\util\template-factory.spec.js" />
+    <Content Include="Bootstrap\js\tests\visual\alert.html" />
+    <Content Include="Bootstrap\js\tests\visual\button.html" />
+    <Content Include="Bootstrap\js\tests\visual\carousel.html" />
+    <Content Include="Bootstrap\js\tests\visual\collapse.html" />
+    <Content Include="Bootstrap\js\tests\visual\dropdown.html" />
+    <Content Include="Bootstrap\js\tests\visual\input.html" />
+    <Content Include="Bootstrap\js\tests\visual\modal.html" />
+    <Content Include="Bootstrap\js\tests\visual\popover.html" />
+    <Content Include="Bootstrap\js\tests\visual\scrollspy.html" />
+    <Content Include="Bootstrap\js\tests\visual\tab.html" />
+    <Content Include="Bootstrap\js\tests\visual\toast.html" />
+    <Content Include="Bootstrap\js\tests\visual\tooltip.html" />
+    <Content Include="Bootstrap\nuget\bootstrap.png" />
+    <Content Include="Bootstrap\package.js" />
+    <Content Include="Bootstrap\scss\tests\jasmine.js" />
+    <Content Include="Bootstrap\scss\tests\sass-true\register.js" />
+    <Content Include="Bootstrap\scss\tests\sass-true\runner.js" />
+    <Content Include="Bootstrap\site\assets\js\application.js" />
+    <Content Include="Bootstrap\site\assets\js\code-examples.js" />
+    <Content Include="Bootstrap\site\assets\js\search.js" />
+    <Content Include="Bootstrap\site\assets\js\snippets.js" />
+    <Content Include="Bootstrap\site\assets\js\vendor\clipboard.min.js" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\album-rtl\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\album\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\badges\badges.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\badges\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\blog-rtl\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\blog\blog.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\blog\blog.rtl.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\blog\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\breadcrumbs\breadcrumbs.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\breadcrumbs\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\buttons\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\carousel-rtl\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\carousel\carousel.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\carousel\carousel.rtl.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\carousel\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\cheatsheet-rtl\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\cheatsheet\cheatsheet.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\cheatsheet\cheatsheet.js" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\cheatsheet\cheatsheet.rtl.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\cheatsheet\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\checkout-rtl\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\checkout\checkout.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\checkout\checkout.js" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\checkout\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\cover\cover.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\cover\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dashboard-rtl\dashboard.js" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dashboard-rtl\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dashboard\dashboard.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dashboard\dashboard.js" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dashboard\dashboard.rtl.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dashboard\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dropdowns\dropdowns.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\dropdowns\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\features\features.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\features\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\features\unsplash-photo-1.jpg" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\features\unsplash-photo-2.jpg" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\features\unsplash-photo-3.jpg" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\footers\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\grid\grid.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\grid\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\headers\headers.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\headers\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\heroes\bootstrap-docs.png" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\heroes\bootstrap-themes.png" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\heroes\heroes.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\heroes\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\jumbotrons\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\jumbotrons\jumbotrons.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\jumbotron\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\list-groups\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\list-groups\list-groups.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\masonry\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\modals\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\modals\modals.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbar-bottom\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbar-fixed\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbar-fixed\navbar-fixed.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbar-static\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbar-static\navbar-static.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbars-offcanvas\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbars-offcanvas\navbars-offcanvas.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbars\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\navbars\navbars.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\offcanvas-navbar\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\offcanvas-navbar\offcanvas-navbar.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\offcanvas-navbar\offcanvas-navbar.js" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\pricing\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\pricing\pricing.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\product\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\product\product.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sidebars\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sidebars\sidebars.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sidebars\sidebars.js" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sign-in\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sign-in\sign-in.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\starter-template\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sticky-footer-navbar\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sticky-footer-navbar\sticky-footer-navbar.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sticky-footer\index.html" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\sticky-footer\sticky-footer.css" />
+    <Content Include="Bootstrap\site\content\docs\5.3\_index.html" />
+    <Content Include="Bootstrap\site\content\docs\_index.html" />
+    <Content Include="Bootstrap\site\layouts\alias.html" />
+    <Content Include="Bootstrap\site\layouts\partials\ads.html" />
+    <Content Include="Bootstrap\site\layouts\partials\analytics.html" />
+    <Content Include="Bootstrap\site\layouts\partials\docs-navbar.html" />
+    <Content Include="Bootstrap\site\layouts\partials\docs-sidebar.html" />
+    <Content Include="Bootstrap\site\layouts\partials\docs-versions.html" />
+    <Content Include="Bootstrap\site\layouts\partials\favicons.html" />
+    <Content Include="Bootstrap\site\layouts\partials\footer.html" />
+    <Content Include="Bootstrap\site\layouts\partials\header.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\components-utilities.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\css-variables.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\customize.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\get-started.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\icons.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\masthead.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\plugins.html" />
+    <Content Include="Bootstrap\site\layouts\partials\home\themes.html" />
+    <Content Include="Bootstrap\site\layouts\partials\icons.html" />
+    <Content Include="Bootstrap\site\layouts\partials\icons\bootstrap-white-fill.svg" />
+    <Content Include="Bootstrap\site\layouts\partials\icons\circle-square.svg" />
+    <Content Include="Bootstrap\site\layouts\partials\icons\droplet-fill.svg" />
+    <Content Include="Bootstrap\site\layouts\partials\icons\github.svg" />
+    <Content Include="Bootstrap\site\layouts\partials\icons\hamburger.svg" />
+    <Content Include="Bootstrap\site\layouts\partials\icons\opencollective.svg" />
+    <Content Include="Bootstrap\site\layouts\partials\icons\twitter.svg" />
+    <Content Include="Bootstrap\site\layouts\partials\redirect.html" />
+    <Content Include="Bootstrap\site\layouts\partials\scripts.html" />
+    <Content Include="Bootstrap\site\layouts\partials\skippy.html" />
+    <Content Include="Bootstrap\site\layouts\partials\social.html" />
+    <Content Include="Bootstrap\site\layouts\partials\stylesheet.html" />
+    <Content Include="Bootstrap\site\layouts\partials\table-content.html" />
+    <Content Include="Bootstrap\site\layouts\robots.txt" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\added-in.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\bs-table.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\callout-deprecated-dark-variants.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\callout.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\deprecated-in.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\docsref.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\example.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\js-dismiss.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\js-docs.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\markdown.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\param.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\partial.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\placeholder.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\scss-docs.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\table.html" />
+    <Content Include="Bootstrap\site\layouts\shortcodes\year.html" />
+    <Content Include="Bootstrap\site\layouts\sitemap.xml" />
+    <Content Include="Bootstrap\site\layouts\_default\404.html" />
+    <Content Include="Bootstrap\site\layouts\_default\baseof.html" />
+    <Content Include="Bootstrap\site\layouts\_default\docs.html" />
+    <Content Include="Bootstrap\site\layouts\_default\examples.html" />
+    <Content Include="Bootstrap\site\layouts\_default\home.html" />
+    <Content Include="Bootstrap\site\layouts\_default\redirect.html" />
+    <Content Include="Bootstrap\site\layouts\_default\single.html" />
+    <Content Include="Bootstrap\site\layouts\_default\_markup\render-heading.html" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\brand\bootstrap-logo-black.svg" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\brand\bootstrap-logo-shadow.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\brand\bootstrap-logo-white.svg" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\brand\bootstrap-logo.svg" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\brand\bootstrap-social.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\bootstrap-icons%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\bootstrap-icons.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\bootstrap-themes%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\bootstrap-themes-collage%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\bootstrap-themes-collage.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\bootstrap-themes.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\album%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\album-rtl%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\album-rtl.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\album.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\badges%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\badges.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\blog%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\blog-rtl%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\blog-rtl.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\blog.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\breadcrumbs%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\breadcrumbs.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\buttons%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\buttons.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\carousel%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\carousel-rtl%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\carousel-rtl.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\carousel.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\cheatsheet%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\cheatsheet-rtl%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\cheatsheet-rtl.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\cheatsheet.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\checkout%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\checkout-rtl%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\checkout-rtl.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\checkout.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\cover%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\cover.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\dashboard%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\dashboard-rtl%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\dashboard-rtl.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\dashboard.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\dropdowns%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\dropdowns.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\features%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\features.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\footers%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\footers.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\grid%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\grid.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\headers%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\headers.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\heroes%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\heroes.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\jumbotron%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\jumbotron.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\jumbotrons%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\jumbotrons.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\list-groups%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\list-groups.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\masonry%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\masonry.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\modals%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\modals.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbar-bottom%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbar-bottom.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbar-fixed%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbar-fixed.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbar-static%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbar-static.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbars%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbars-offcanvas%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbars-offcanvas.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\navbars.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\offcanvas-navbar%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\offcanvas-navbar.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\pricing%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\pricing.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\product%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\product.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sidebars%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sidebars.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sign-in%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sign-in.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\starter-template%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\starter-template.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sticky-footer%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sticky-footer-navbar%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sticky-footer-navbar.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\examples\sticky-footer.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\android-chrome-192x192.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\android-chrome-512x512.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\apple-touch-icon.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\favicon-16x16.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\favicon-32x32.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\favicon.ico" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\safari-pinned-tab.svg" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\bootstrap-parcel%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\bootstrap-parcel.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\bootstrap-vite%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\bootstrap-vite.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\bootstrap-webpack%402x.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\bootstrap-webpack.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\parcel-dev-server-bootstrap.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\parcel-dev-server.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\vite-dev-server-bootstrap.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\vite-dev-server.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\webpack-dev-server-bootstrap.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\guides\webpack-dev-server.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\parcel.png" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\vite.svg" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\webpack.svg" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\js\color-modes.js" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\js\validate-forms.js" />
+    <Content Include="Bootstrap\site\static\sw.js" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Bootstrap\Scripts\bootstrap.bundle.js" />
+    <Content Include="Bootstrap\Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Bootstrap\Scripts\bootstrap.esm.js" />
+    <Content Include="Bootstrap\Scripts\bootstrap.esm.min.js" />
+    <Content Include="Bootstrap\Scripts\bootstrap.js" />
+    <Content Include="Bootstrap\Scripts\bootstrap.min.js" />
+    <Content Include="Bootstrap\Scripts\bootstrap.min.js.map" />
+    <Content Include="Bootstrap\Scripts\bootstrap.js.map" />
+    <Content Include="Bootstrap\Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Bootstrap\Scripts\bootstrap.esm.js.map" />
+    <Content Include="Bootstrap\Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Bootstrap\Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Login.aspx" />
+    <Content Include="Bootstrap\.browserslistrc" />
+    <Content Include="Bootstrap\.bundlewatch.config.json" />
+    <Content Include="Bootstrap\.cspell.json" />
+    <Content Include="Bootstrap\.editorconfig" />
+    <Content Include="Bootstrap\.eslintignore" />
+    <Content Include="Bootstrap\.eslintrc.json" />
+    <Content Include="Bootstrap\.github\CODEOWNERS" />
+    <Content Include="Bootstrap\.github\codeql\codeql-config.yml" />
+    <Content Include="Bootstrap\.github\CONTRIBUTING.md" />
+    <Content Include="Bootstrap\.github\dependabot.yml" />
+    <Content Include="Bootstrap\.github\ISSUE_TEMPLATE\bug_report.yml" />
+    <Content Include="Bootstrap\.github\ISSUE_TEMPLATE\config.yml" />
+    <Content Include="Bootstrap\.github\ISSUE_TEMPLATE\feature_request.yml" />
+    <Content Include="Bootstrap\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Bootstrap\.github\release-drafter.yml" />
+    <Content Include="Bootstrap\.github\SUPPORT.md" />
+    <Content Include="Bootstrap\.github\workflows\browserstack.yml" />
+    <Content Include="Bootstrap\.github\workflows\bundlewatch.yml" />
+    <Content Include="Bootstrap\.github\workflows\calibreapp-image-actions.yml" />
+    <Content Include="Bootstrap\.github\workflows\codeql.yml" />
+    <Content Include="Bootstrap\.github\workflows\cspell.yml" />
+    <Content Include="Bootstrap\.github\workflows\css.yml" />
+    <Content Include="Bootstrap\.github\workflows\docs.yml" />
+    <Content Include="Bootstrap\.github\workflows\issue-close-require.yml" />
+    <Content Include="Bootstrap\.github\workflows\issue-labeled.yml" />
+    <Content Include="Bootstrap\.github\workflows\js.yml" />
+    <Content Include="Bootstrap\.github\workflows\lint.yml" />
+    <Content Include="Bootstrap\.github\workflows\node-sass.yml" />
+    <Content Include="Bootstrap\.github\workflows\release-notes.yml" />
+    <Content Include="Bootstrap\.npmrc" />
+    <Content Include="Bootstrap\.stylelintignore" />
+    <Content Include="Bootstrap\.stylelintrc.json" />
+    <Content Include="Bootstrap\CODE_OF_CONDUCT.md" />
+    <Content Include="Bootstrap\composer.json" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <Content Include="Bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="Bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Bootstrap\dist\js\bootstrap.esm.js.map" />
+    <Content Include="Bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="Bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="Bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="Bootstrap\hugo.yml" />
+    <Content Include="Bootstrap\js\dist\alert.js.map" />
+    <Content Include="Bootstrap\js\dist\base-component.js.map" />
+    <Content Include="Bootstrap\js\dist\button.js.map" />
+    <Content Include="Bootstrap\js\dist\carousel.js.map" />
+    <Content Include="Bootstrap\js\dist\collapse.js.map" />
+    <Content Include="Bootstrap\js\dist\dom\data.js.map" />
+    <Content Include="Bootstrap\js\dist\dom\event-handler.js.map" />
+    <Content Include="Bootstrap\js\dist\dom\manipulator.js.map" />
+    <Content Include="Bootstrap\js\dist\dom\selector-engine.js.map" />
+    <Content Include="Bootstrap\js\dist\dropdown.js.map" />
+    <Content Include="Bootstrap\js\dist\modal.js.map" />
+    <Content Include="Bootstrap\js\dist\offcanvas.js.map" />
+    <Content Include="Bootstrap\js\dist\popover.js.map" />
+    <Content Include="Bootstrap\js\dist\scrollspy.js.map" />
+    <Content Include="Bootstrap\js\dist\tab.js.map" />
+    <Content Include="Bootstrap\js\dist\toast.js.map" />
+    <Content Include="Bootstrap\js\dist\tooltip.js.map" />
+    <Content Include="Bootstrap\js\dist\util\backdrop.js.map" />
+    <Content Include="Bootstrap\js\dist\util\component-functions.js.map" />
+    <Content Include="Bootstrap\js\dist\util\config.js.map" />
+    <Content Include="Bootstrap\js\dist\util\focustrap.js.map" />
+    <Content Include="Bootstrap\js\dist\util\index.js.map" />
+    <Content Include="Bootstrap\js\dist\util\sanitizer.js.map" />
+    <Content Include="Bootstrap\js\dist\util\scrollbar.js.map" />
+    <Content Include="Bootstrap\js\dist\util\swipe.js.map" />
+    <Content Include="Bootstrap\js\dist\util\template-factory.js.map" />
+    <Content Include="Bootstrap\js\tests\README.md" />
+    <Content Include="Bootstrap\LICENSE" />
+    <Content Include="Bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="Bootstrap\nuget\bootstrap.sass.nuspec" />
+    <Content Include="Bootstrap\nuget\MyGet.ps1" />
+    <Content Include="Bootstrap\package-lock.json" />
+    <Content Include="Bootstrap\package.json" />
+    <Content Include="Bootstrap\README.md" />
+    <Content Include="Bootstrap\scss\bootstrap-grid.scss" />
+    <Content Include="Bootstrap\scss\bootstrap-reboot.scss" />
+    <Content Include="Bootstrap\scss\bootstrap-utilities.scss" />
+    <Content Include="Bootstrap\scss\bootstrap.scss" />
+    <Content Include="Bootstrap\scss\forms\_floating-labels.scss" />
+    <Content Include="Bootstrap\scss\forms\_form-check.scss" />
+    <Content Include="Bootstrap\scss\forms\_form-control.scss" />
+    <Content Include="Bootstrap\scss\forms\_form-range.scss" />
+    <Content Include="Bootstrap\scss\forms\_form-select.scss" />
+    <Content Include="Bootstrap\scss\forms\_form-text.scss" />
+    <Content Include="Bootstrap\scss\forms\_input-group.scss" />
+    <Content Include="Bootstrap\scss\forms\_labels.scss" />
+    <Content Include="Bootstrap\scss\forms\_validation.scss" />
+    <Content Include="Bootstrap\scss\helpers\_clearfix.scss" />
+    <Content Include="Bootstrap\scss\helpers\_color-bg.scss" />
+    <Content Include="Bootstrap\scss\helpers\_colored-links.scss" />
+    <Content Include="Bootstrap\scss\helpers\_focus-ring.scss" />
+    <Content Include="Bootstrap\scss\helpers\_icon-link.scss" />
+    <Content Include="Bootstrap\scss\helpers\_position.scss" />
+    <Content Include="Bootstrap\scss\helpers\_ratio.scss" />
+    <Content Include="Bootstrap\scss\helpers\_stacks.scss" />
+    <Content Include="Bootstrap\scss\helpers\_stretched-link.scss" />
+    <Content Include="Bootstrap\scss\helpers\_text-truncation.scss" />
+    <Content Include="Bootstrap\scss\helpers\_visually-hidden.scss" />
+    <Content Include="Bootstrap\scss\helpers\_vr.scss" />
+    <Content Include="Bootstrap\scss\mixins\_alert.scss" />
+    <Content Include="Bootstrap\scss\mixins\_backdrop.scss" />
+    <Content Include="Bootstrap\scss\mixins\_banner.scss" />
+    <Content Include="Bootstrap\scss\mixins\_border-radius.scss" />
+    <Content Include="Bootstrap\scss\mixins\_box-shadow.scss" />
+    <Content Include="Bootstrap\scss\mixins\_breakpoints.scss" />
+    <Content Include="Bootstrap\scss\mixins\_buttons.scss" />
+    <Content Include="Bootstrap\scss\mixins\_caret.scss" />
+    <Content Include="Bootstrap\scss\mixins\_clearfix.scss" />
+    <Content Include="Bootstrap\scss\mixins\_color-mode.scss" />
+    <Content Include="Bootstrap\scss\mixins\_color-scheme.scss" />
+    <Content Include="Bootstrap\scss\mixins\_container.scss" />
+    <Content Include="Bootstrap\scss\mixins\_deprecate.scss" />
+    <Content Include="Bootstrap\scss\mixins\_forms.scss" />
+    <Content Include="Bootstrap\scss\mixins\_gradients.scss" />
+    <Content Include="Bootstrap\scss\mixins\_grid.scss" />
+    <Content Include="Bootstrap\scss\mixins\_image.scss" />
+    <Content Include="Bootstrap\scss\mixins\_list-group.scss" />
+    <Content Include="Bootstrap\scss\mixins\_lists.scss" />
+    <Content Include="Bootstrap\scss\mixins\_pagination.scss" />
+    <Content Include="Bootstrap\scss\mixins\_reset-text.scss" />
+    <Content Include="Bootstrap\scss\mixins\_resize.scss" />
+    <Content Include="Bootstrap\scss\mixins\_table-variants.scss" />
+    <Content Include="Bootstrap\scss\mixins\_text-truncate.scss" />
+    <Content Include="Bootstrap\scss\mixins\_transition.scss" />
+    <Content Include="Bootstrap\scss\mixins\_utilities.scss" />
+    <Content Include="Bootstrap\scss\mixins\_visually-hidden.scss" />
+    <Content Include="Bootstrap\scss\tests\mixins\_auto-import-of-variables-dark.test.scss" />
+    <Content Include="Bootstrap\scss\tests\mixins\_color-modes.test.scss" />
+    <Content Include="Bootstrap\scss\tests\mixins\_media-query-color-mode-full.test.scss" />
+    <Content Include="Bootstrap\scss\tests\mixins\_utilities.test.scss" />
+    <Content Include="Bootstrap\scss\tests\utilities\_api.test.scss" />
+    <Content Include="Bootstrap\scss\utilities\_api.scss" />
+    <Content Include="Bootstrap\scss\vendor\_rfs.scss" />
+    <Content Include="Bootstrap\scss\_accordion.scss" />
+    <Content Include="Bootstrap\scss\_alert.scss" />
+    <Content Include="Bootstrap\scss\_badge.scss" />
+    <Content Include="Bootstrap\scss\_breadcrumb.scss" />
+    <Content Include="Bootstrap\scss\_button-group.scss" />
+    <Content Include="Bootstrap\scss\_buttons.scss" />
+    <Content Include="Bootstrap\scss\_card.scss" />
+    <Content Include="Bootstrap\scss\_carousel.scss" />
+    <Content Include="Bootstrap\scss\_close.scss" />
+    <Content Include="Bootstrap\scss\_containers.scss" />
+    <Content Include="Bootstrap\scss\_dropdown.scss" />
+    <Content Include="Bootstrap\scss\_forms.scss" />
+    <Content Include="Bootstrap\scss\_functions.scss" />
+    <Content Include="Bootstrap\scss\_grid.scss" />
+    <Content Include="Bootstrap\scss\_helpers.scss" />
+    <Content Include="Bootstrap\scss\_images.scss" />
+    <Content Include="Bootstrap\scss\_list-group.scss" />
+    <Content Include="Bootstrap\scss\_maps.scss" />
+    <Content Include="Bootstrap\scss\_mixins.scss" />
+    <Content Include="Bootstrap\scss\_modal.scss" />
+    <Content Include="Bootstrap\scss\_nav.scss" />
+    <Content Include="Bootstrap\scss\_navbar.scss" />
+    <Content Include="Bootstrap\scss\_offcanvas.scss" />
+    <Content Include="Bootstrap\scss\_pagination.scss" />
+    <Content Include="Bootstrap\scss\_placeholders.scss" />
+    <Content Include="Bootstrap\scss\_popover.scss" />
+    <Content Include="Bootstrap\scss\_progress.scss" />
+    <Content Include="Bootstrap\scss\_reboot.scss" />
+    <Content Include="Bootstrap\scss\_root.scss" />
+    <Content Include="Bootstrap\scss\_spinners.scss" />
+    <Content Include="Bootstrap\scss\_tables.scss" />
+    <Content Include="Bootstrap\scss\_toasts.scss" />
+    <Content Include="Bootstrap\scss\_tooltip.scss" />
+    <Content Include="Bootstrap\scss\_transitions.scss" />
+    <Content Include="Bootstrap\scss\_type.scss" />
+    <Content Include="Bootstrap\scss\_utilities.scss" />
+    <Content Include="Bootstrap\scss\_variables-dark.scss" />
+    <Content Include="Bootstrap\scss\_variables.scss" />
+    <Content Include="Bootstrap\SECURITY.md" />
+    <Content Include="Bootstrap\site\assets\scss\docs.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_ads.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_anchor.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_brand.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_buttons.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_callouts.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_clipboard-js.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_colors.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_component-examples.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_content.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_footer.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_layout.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_masthead.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_navbar.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_placeholder-img.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_scrolling.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_search.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_sidebar.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_skippy.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_syntax.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_toc.scss" />
+    <Content Include="Bootstrap\site\assets\scss\_variables.scss" />
+    <Content Include="Bootstrap\site\content\404.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\about\brand.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\about\license.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\about\overview.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\about\team.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\about\translations.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\accordion.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\alerts.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\badge.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\breadcrumb.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\button-group.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\buttons.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\card.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\carousel.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\close-button.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\collapse.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\dropdowns.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\list-group.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\modal.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\navbar.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\navs-tabs.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\offcanvas.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\pagination.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\placeholders.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\popovers.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\progress.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\scrollspy.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\spinners.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\toasts.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\components\tooltips.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\content\figures.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\content\images.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\content\reboot.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\content\tables.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\content\typography.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\color-modes.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\color.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\components.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\css-variables.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\optimize.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\options.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\overview.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\customize\sass.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\docsref.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\examples\_index.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\extend\approach.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\extend\icons.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\checks-radios.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\floating-labels.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\form-control.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\input-group.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\layout.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\overview.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\range.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\select.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\forms\validation.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\accessibility.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\best-practices.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\browsers-devices.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\contents.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\contribute.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\download.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\introduction.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\javascript.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\parcel.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\rfs.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\rtl.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\vite.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\getting-started\webpack.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\clearfix.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\color-background.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\colored-links.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\focus-ring.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\icon-link.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\position.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\ratio.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\stacks.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\stretched-link.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\text-truncation.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\vertical-rule.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\helpers\visually-hidden.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\breakpoints.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\columns.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\containers.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\css-grid.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\grid.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\gutters.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\utilities.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\layout\z-index.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\migration.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\api.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\background.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\borders.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\colors.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\display.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\flex.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\float.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\interactions.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\link.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\object-fit.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\opacity.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\overflow.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\position.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\shadows.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\sizing.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\spacing.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\text.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\vertical-align.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\visibility.md" />
+    <Content Include="Bootstrap\site\content\docs\5.3\utilities\z-index.md" />
+    <Content Include="Bootstrap\site\content\docs\versions.md" />
+    <Content Include="Bootstrap\site\data\breakpoints.yml" />
+    <Content Include="Bootstrap\site\data\colors.yml" />
+    <Content Include="Bootstrap\site\data\core-team.yml" />
+    <Content Include="Bootstrap\site\data\docs-versions.yml" />
+    <Content Include="Bootstrap\site\data\examples.yml" />
+    <Content Include="Bootstrap\site\data\grays.yml" />
+    <Content Include="Bootstrap\site\data\icons.yml" />
+    <Content Include="Bootstrap\site\data\plugins.yml" />
+    <Content Include="Bootstrap\site\data\sidebar.yml" />
+    <Content Include="Bootstrap\site\data\theme-colors.yml" />
+    <Content Include="Bootstrap\site\data\translations.yml" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\danger-async-methods.md" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\info-mediaqueries-breakpoints.md" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\info-npm-starter.md" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\info-prefersreducedmotion.md" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\info-sanitizer.md" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\warning-color-assistive-technologies.md" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\warning-data-bs-title-vs-title.md" />
+    <Content Include="Bootstrap\site\layouts\partials\callouts\warning-input-support.md" />
+    <Content Include="Bootstrap\site\layouts\partials\guide-footer.md" />
+    <Content Include="Bootstrap\site\layouts\partials\js-data-attributes.md" />
+    <Content Include="Bootstrap\site\static\CNAME" />
+    <Content Include="Bootstrap\site\static\docs\5.3\assets\img\favicons\manifest.json" />
+    <None Include="Bootstrap\Scripts\jquery-3.7.0.intellisense.js" />
+    <Content Include="Bootstrap\Scripts\jquery-3.7.0.js" />
+    <Content Include="Bootstrap\Scripts\jquery-3.7.0.min.js" />
+    <Content Include="Bootstrap\Scripts\jquery-3.7.0.slim.js" />
+    <Content Include="Bootstrap\Scripts\jquery-3.7.0.slim.min.js" />
+    <Content Include="Bootstrap\Scripts\modernizr-2.8.3.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\DetailsView.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\Focus.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\GridView.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\Menu.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\SmartNav.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\TreeView.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\WebForms.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\WebParts.js" />
+    <Content Include="Bootstrap\Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Bootstrap\Scripts\jquery-3.7.0.slim.min.map" />
+    <Content Include="Bootstrap\Scripts\jquery-3.7.0.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50477</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44391/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
